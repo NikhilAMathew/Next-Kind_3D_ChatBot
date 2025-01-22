@@ -1,6 +1,6 @@
 
 # **Next-Gen 3D ChatBot**
-
+![alt text](<Avatar.png>)
 An interactive AI chatbot that provides text-to-speech responses synchronized with facial expressions, using advanced 3D avatars generated with **Ready Player Me**. Built with **Next.js**, **TypeScript**, **Three.js**, and **GROQ API**, the chatbot offers a rich user experience that combines dynamic animations, expressive avatars, and advanced AI capabilities.
 
 ---

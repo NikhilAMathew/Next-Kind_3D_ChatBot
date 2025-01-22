@@ -1,31 +1,92 @@
-# 3D AI Bot
 
-<img align="left" alt="OpenAi" width="30px" style="padding-right:10px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/512px-ChatGPT_logo.svg.png" />
+# **Next-Gen 3D ChatBot**
 
-<img align="left" alt="NextJS" width="30px" style="padding-right:10px;" src="https://global.discourse-cdn.com/standard17/uploads/threejs/original/2X/e/e4f86d2200d2d35c30f7b1494e96b9595ebc2751.png" />
+An interactive AI chatbot that provides text-to-speech responses synchronized with facial expressions, using advanced 3D avatars generated with **Ready Player Me**. Built with **Next.js**, **TypeScript**, **Three.js**, and **GROQ API**, the chatbot offers a rich user experience that combines dynamic animations, expressive avatars, and advanced AI capabilities.
 
-<img align="left" alt="TypeScript" width="30px" style="padding-right:10px;" src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg" />
+---
 
-<img align="left" alt="TypeScript" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg" />
+## **Features**
 
-<br/>
-<br/>
+### **1. Dynamic 3D Avatars**
+- **Avatar Customization**: Avatars are created using **Ready Player Me**, allowing users to generate lifelike 3D avatars from photos or customize them through an interactive UI.
+- **GLTF Support**: Easily import and render 3D avatar models (GLTF format) for seamless integration.
 
-I'm thrilled to introduce you to my latest project, which harnesses the power of React Three Fiber and OpenAI to create an incredible new experience. With stunning 3D graphics and full interactivity, this project immerses you in a world where AI technology comes to life in ways you never thought possible. Come explore and discover the limitless potential of this groundbreaking technology!
+### **2. Facial Expressions and Animations**
+- Real-time facial animations synchronized with the chatbot’s speech.
+- Expressions change dynamically based on context (e.g., happy, surprised, or neutral).
 
-[Live Demo](https://3d-chatbot.vercel.app/)
+### **3. AI Text-to-Speech**
+- **Speech Synchronization**: Uses the browser's SpeechSynthesis API to deliver human-like responses.
+- **Typewriter Effect**: Displays text responses word by word, synced with speech output.
+
+### **4. Powered by GROQ API**
+- Fetches conversational data and responses efficiently with the GROQ API.
+- Ensures fast, scalable, and reliable backend integration.
+
+### **5. Built with Modern Web Technologies**
+- **Next.js**: A powerful React-based framework for building server-rendered and static web applications.
+- **Three.js**: A versatile library for rendering 3D avatars and animations.
+- **TypeScript**: Adds type safety to ensure a robust and maintainable codebase.
+
+---
+
+## **Getting Started**
+
+### **Prerequisites**
+Ensure you have the following installed:
+- Node.js >= 16.x
+- npm or yarn
+
+### **Installation**
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/ai-chatbot.git
+   cd ai-chatbot
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Set up the environment variables:
+   - Add API keys for GROQ API in a `.env` file.
 
 
-## YT
-[![Create your own 3D AI bot : Next js 13, OpenAi, React, Three.js](https://ytcards.demolab.com/?id=LdNoGGZd72c&title=Create+your+own+3D+AI+bot+%3A+Next+js+13%2C+OpenAi%2C+React%2C+Three.js&lang=en&timestamp=1680811207&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250 "Create your own 3D AI bot : Next js 13, OpenAi, React, Three.js")](https://www.youtube.com/watch?v=LdNoGGZd72c)
+### **Run the Project**
+Start the development server:
+```bash
+npm run dev
+```
+Access the chatbot at `http://localhost:3001`.
 
-<img width="1680" alt="Screenshot 2023-03-24 at 9 54 50 AM" src="https://user-images.githubusercontent.com/76642519/227436694-de698e65-9c71-4a2a-a948-84e4905aa53e.png">
+---
 
-![Screenshot 2023-03-24 at 9 55 24 AM](https://user-images.githubusercontent.com/76642519/227437131-f294daa8-754d-42b8-9ffe-b85f1718927c.png)
+## **Usage**
+1. Customize your avatar via the [Ready Player Me](https://demo.readyplayer.me/de/avatar?quickStart) or import a pre-built GLTF model.
+2. Interact with the chatbot by typing a query.
+3. Watch the 3D avatar respond with synchronized speech and facial expressions.
 
-<img width="1674" alt="Screenshot 2023-03-24 at 9 55 33 AM" src="https://user-images.githubusercontent.com/76642519/227437017-20296804-0b03-4e0c-a709-c2a8a600bb7b.png">
+---
 
-### References
+## **Technologies Used**
+- **Ready Player Me**: 3D avatar generation and customization.
+- **Three.js**: Rendering and animating 3D models.
+- **Next.js**: Web framework for fast server-side rendering.
+- **TypeScript**: Static type-checking for JavaScript.
+- **GROQ API**: Data querying for seamless backend integration.
 
--   [Chat API OpenAi](https://platform.openai.com/docs/api-reference/chat/create)
--   [Light inspiration for the canvas](https://codesandbox.io/s/tx1pq)
+---
+
+## **Contributing**
+Contributions are welcome! Please fork the repository and submit a pull request with your changes.
+
+---
+
+## **License**
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+---
+
+## **Acknowledgments**
+- **Ready Player Me** for 3D avatars and tools.
+- **Three.js** for its powerful rendering library.
+- OpenAI or the GROQ community for their APIs and support.

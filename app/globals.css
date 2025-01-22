@@ -1,0 +1,331 @@
+:root {
+    font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    --background-light: #f5f5f6;
+    --background-dark: #121212;
+    --foreground-light: #fff;
+    --foreground-dark: #1e1e1e;
+    --text-light: #333;
+    --text-dark: #f5f5f5;
+    --primary-color: #ccc;
+    --primary-hover: #3700b3;
+}
+
+[data-theme="light"] {
+    --background: var(--background-light);
+    --foreground: var(--foreground-light);
+    --text-color: var(--text-light);
+}
+
+[data-theme="dark"] {
+    --background: var(--background-dark);
+    --foreground: var(--foreground-dark);
+    --text-color: var(--text-dark);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    background: var(--background-light);
+
+    color: var(--text-color);
+    overflow: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    border-radius: 0.5em;
+    overflow-y: auto;
+    max-height: 80vh;
+    background-color: var(--background-light);
+    position: absolute;
+    top: 1.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+a {
+    text-decoration: none;
+    color: var(--foreground-dark);
+}
+
+.header-logo h1 {
+    font-size: 1.2em;
+    line-height: 1.1;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.header-logo h1:hover {
+    transform: scale(1.05);
+}
+
+.header-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.header-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.header-nav ul li a:hover {
+    color: #ccc;
+    transform: scale(1.1);
+}
+
+.header-btn button {
+    width: 70px;
+    padding: 0.5em;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: var(--text-dark);
+    border: 1px solid #ccc;
+    border-radius: 0.5em;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.header-btn button:hover {
+    transform: scale(1.1);
+}
+
+.chatbot-canvas {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.chat {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.6em 1em;
+    border-radius: 0.5em;
+    overflow-y: auto;
+    max-height: 80vh;
+    background-color: var(--background-light);
+    position: absolute;
+    bottom: 2em;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.chat-form {
+    display: flex;
+    width: 100%;
+    gap: 0.5em;
+}
+
+.chat-form input {
+    flex: 1;
+    padding: 0.75em;
+    border: none;
+    border-radius: 0.5em;
+    background-color: var(--background-light);
+    outline: none;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.chat-form input:focus {
+    border-color: var(--primary-color);
+}
+
+.chat-form button {
+    min-width: 70px;
+    padding: 0.5em;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: var(--text-dark);
+    border: 1px solid #ccc;
+    border-radius: 0.5em;
+    font-size: 1em;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.chat-form button:hover {
+    transform: scale(1.1);
+}
+
+.subtitle-container {
+    position: absolute;
+    bottom: 8em;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 60%;
+    text-align: center;
+    /* background: rgba(0, 0, 0, 0.7);
+    padding: 0.5em 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); */
+    color: #000;
+    border-radius: 0.5em;
+    
+    overflow-y: auto; 
+    max-height: 30%; 
+    z-index: 20;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
+}
+
+.subtitle-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.subtitle-container::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+}
+
+.subtitle-line {
+    opacity: 1;
+    white-space: pre-wrap; 
+
+    animation: none; 
+}
+
+.docs-main {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    padding-top: 6em;
+}
+
+.content-wrapper {
+    width: 60%;
+    max-width: 1200px;
+    padding: 2em;
+    background-color: var(--background-light);
+    border-radius: 1em;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    color: var(--text-color);
+}
+
+.docs-title {
+    font-size: 2.5em;
+    color: var(--text-color);
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.docs-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+}
+
+.docs-description {
+    font-size: 1em;
+    text-align: justify;
+    line-height: 1.7;
+    max-width: 900px;
+    margin: 0 auto;
+    color: var(--text-color);
+}
+
+.docs-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+
+.docs-image img {
+    border-radius: 10px;
+}
+
+.docs-link {
+    text-decoration: underline;
+    color: var(--text-light);
+    transition: color 0.3s ease;
+}
+
+.docs-link:hover {
+    color: var(--primary-hover);
+}
+
+@media (max-width: 1024px) {
+    .docs-content {
+        gap: 0.5em;
+    }
+
+    .docs-image img {
+        width: 350px;
+        height: auto;
+    }
+
+}
+
+@media (max-width: 768px) {
+    header {
+        width: 90%;
+    }
+
+    .chat {
+        width: 90%;
+        bottom: 1em;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .subtitle-container {
+        bottom: 6em;
+    }
+
+    .content-wrapper {
+        width: 90%;
+    }
+
+    .docs-content {
+        font-size: 0.875em;
+    }
+}
+
+@media (max-width: 480px) {
+    .chat-form input {
+        font-size: 0.875em;
+    }
+
+    .subtitle-container { 
+        width: 80%;
+    }
+
+    .subtitle-line {
+        font-size: 0.875em;
+    }
+
+    .chat-form button {
+        font-size: 0.875em;
+    }
+
+    .docs-image img {
+        width: 250px;
+        height: auto;
+    }
+}
